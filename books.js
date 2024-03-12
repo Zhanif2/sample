@@ -22,9 +22,15 @@ const booksHtml =  books.map((book) => {
       <span class="book__price--normal">£${book.originalPrice}</span> £${book.salePrice}
     </div>
   </div>`
-});
-booksWrapper.innerHTML = booksHtml;
+})
+.join("");
+
 console.log(booksHtml);
+
+
+
+
+booksWrapper.innerHTML = booksHtml;
  //booksWrapper.innerHTML = ;
 }
 
