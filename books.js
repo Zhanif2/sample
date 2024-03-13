@@ -19,19 +19,18 @@ const booksHtml =  books.map((book) => {
       <i class="fas fa-star-half-alt"></i>
     </div>
     <div class="book__price">
-      <span class="book__price--normal">£${book.originalPrice}</span> £${book.salePrice}
+      <span>£${book.originalPrice.toFixed(2)}</span> 
     </div>
   </div>`
 })
 .join("");
 
-console.log(booksHtml);
-
-
-
-
 booksWrapper.innerHTML = booksHtml;
- //booksWrapper.innerHTML = ;
+}
+
+
+function filterBooks(event){
+  console.log(event.target.value)
 }
 
 
