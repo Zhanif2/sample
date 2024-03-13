@@ -6,7 +6,18 @@ const books = getBooks();
 if (filter === 'LOW_TO_HIGH') {
 books.sort((a, b) => a.originalPrice - b.originalPrice);
 }
+else if (filter === 'HIGH_TO_LOW'){
+books.sort((a, b) => b.originalPrice - a.originalPrice);
+}
+else if (filter === 'RATING'){
+books.sort((a, b) => b.rating - a.rating);
+}
 
+let ratingHTML = '';
+
+for ( let i =0; i < rating; ++i){
+  ratingHTML += '<i class= "fas fa-star"></i>'
+}
 
 
 const booksHtml =  books.map((book) => {
